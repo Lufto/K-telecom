@@ -1,0 +1,42 @@
+:root{
+	--primary-color: #C81059;
+	--primary-color-text: #C8235A;
+	--secondary-color: #0099C8;
+
+	--black: #000;
+	--black-light: rgba(45, 45, 45, 0.10);
+	--black-extra-light: #2D2D2D;
+	--black-text: #333;
+
+	--gray-dark: rgba(85, 85, 85, 0.50);
+	--gray: #555;
+	--gray-light: #ACACAC;
+	--gray-extra-light: #C2C2C2;
+	--gray-border: rgba(51, 51, 51, 0.50);
+
+	--shadow-color: rgba(90, 90, 90, 0.12);
+
+	--white-gray: #F2F6F8;
+	--white: #FFFFFF; 
+
+	--Open-Sans: "Open Sans", sans-serif;
+	--cera-round-pro: 'Cera Round Pro', sans-serif;
+
+
+	--font-xxxs-light: 400 13px / 150% var(--Open-Sans);
+
+	--font-xxs: 500 14px / 150% var(--cera-round-pro);
+	--font-xxs-light: 400 14px / 150% var(--Open-Sans);
+
+	--font-xs: 400 16px / 150% var(--Open-Sans);
+  --font-s: 500 16px / 150% var(--cera-round-pro);
+
+  --font-m: 400 20px / 150% var(--cera-round-pro);
+  --font-m-bold: 500 20px / 150% var(--cera-round-pro);
+
+  --font-l: 500 25px / 150% var(--cera-round-pro);
+	--font-xl: 500 28px / 150% var(--cera-round-pro);
+  --font-xxl: 700 30px / 150% var(--cera-round-pro);
+	--font-xxxl: 500 35px / 150% var(--cera-round-pro);
+  --font-xxxxl: 700 40px / 150% var(--cera-round-pro);
+}

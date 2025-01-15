@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "Cera Round Pro";
+  src: url("../font/cera-round-pro.otf") format("opentype");
+  font-style: normal;
+}
+:root {
+  --primary-color: #C81059;
+  --primary-color-text: #C8235A;
+  --secondary-color: #0099C8;
+  --black: #000;
+  --black-light: rgba(45, 45, 45, 0.10);
+  --black-extra-light: #2D2D2D;
+  --black-text: #333;
+  --gray-dark: rgba(85, 85, 85, 0.50);
+  --gray: #555;
+  --gray-light: #ACACAC;
+  --gray-extra-light: #C2C2C2;
+  --gray-border: rgba(51, 51, 51, 0.50);
+  --shadow-color: rgba(90, 90, 90, 0.12);
+  --white-gray: #F2F6F8;
+  --white: #FFFFFF;
+  --Open-Sans: "Open Sans", sans-serif;
+  --cera-round-pro: "Cera Round Pro", sans-serif;
+  --font-xxxs-light: 400 13px / 150% var(--Open-Sans);
+  --font-xxs: 500 14px / 150% var(--cera-round-pro);
+  --font-xxs-light: 400 14px / 150% var(--Open-Sans);
+  --font-xs: 400 16px / 150% var(--Open-Sans);
+  --font-s: 500 16px / 150% var(--cera-round-pro);
+  --font-m: 400 20px / 150% var(--cera-round-pro);
+  --font-m-bold: 500 20px / 150% var(--cera-round-pro);
+  --font-l: 500 25px / 150% var(--cera-round-pro);
+  --font-xl: 500 28px / 150% var(--cera-round-pro);
+  --font-xxl: 700 30px / 150% var(--cera-round-pro);
+  --font-xxxl: 500 35px / 150% var(--cera-round-pro);
+  --font-xxxxl: 700 40px / 150% var(--cera-round-pro);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+section {
+  margin: 0;
+  font: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button {
+  padding: 15px 80px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary-color);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font: var(--font-xxs);
+}
+button:hover {
+  color: var(--primary-color-text);
+  background: var(--white);
+  border: 1px solid var(--primary-color);
+}
+button:active {
+  color: var(--black-text);
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+}
+
+.button_active {
+  background: var(--secondary-color);
+}
+.button_active:hover {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+header {
+  padding: 22px 0;
+}
+
+.promo {
+  background: var(--white-gray);
+  padding: 88px 0;
+}
+.promo__info h1 {
+  font: var(--font-xxl);
+  color: var(--black-extra-light);
+  max-width: 435px;
+}
+.promo__info ul {
+  margin: 10px 0;
+  list-style: inside;
+}
+.promo__info ul li {
+  color: var(--gray);
+  font: var(--font-xs);
+}
+.promo__info button {
+  margin-top: 20px;
+}
+.promo__image {
+  max-width: 337px;
+}
+
+.product__title {
+  font: var(--font-xl);
+  color: var(--black-extra-light);
+  margin: 52px 0 33px 0;
+}
+.product__wrap {
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 30px;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  box-shadow: 0 0 40px var(--shadow-color);
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  box-shadow: 0 0 40px rgba(90, 90, 90, 0.12);
+}
+.card__title {
+  font: var(--font-m-bold);
+  color: var(--black);
+}
+.card__subtitle {
+  font: var(--font-xxs-light);
+  color: var(--gray-light);
+}
+.card__condition {
+  font: var(--font-l);
+  color: var(--primary-color);
+}
+.card__description {
+  margin-top: 5px;
+  font: var(--font-xxxs-light);
+  color: var(--gray);
+}
+.card__checkbox {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin-top: 25px;
+}
+.card__checkbox input {
+  margin: 3px 10px 0 0;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 2px;
+  border: 1px solid var(--shadow-color);
+  accent-color: #ffffff;
+  width: 22px;
+  height: 22px;
+  transition: 500ms;
+}
+.card__checkbox input:checked {
+  background: var(--secondary-color);
+}
+.card__checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  background: no-repeat url(../image/icons/checkbox.svg);
+  top: 5px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+}
+.card__checkbox-text {
+  font: var(--font-xxs);
+  color: var(--black-extra-light);
+}
+.card__prise {
+  margin-top: 25px;
+  font: var(--font-xs);
+  color: var(--gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card__prise span {
+  font: var(--font-xxxxl);
+  color: var(--black-extra-light);
+}
+.card__offer {
+  font: var(--font-xxxs-light);
+  color: var(--gray-dark);
+}
+.card__button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card.disable {
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+footer {
+  margin: 83px 0 20px 0;
+}
+footer hr {
+  width: 100%;
+  background-color: var(--black-light);
+  height: 1px;
+  border: 0;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+footer .footer__branding {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+footer .footer__branding p {
+  font: var(--font-xxs);
+  color: var(--gray-extra-light);
+}
+footer .footer__link {
+  display: flex;
+}
+footer .footer__link img {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .promo {
+    padding: 20px 0;
+  }
+  .promo .container {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+  footer .footer__branding {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0 20px;
+  }
+  .promo__info button {
+    width: 100%;
+  }
+  .card {
+    max-width: 284px;
+  }
+  .card__button {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 0 20px;
+  }
+  .promo__info h1 {
+    font-size: 20px;
+  }
+  .promo__info ul li {
+    font-size: 13px;
+  }
+  .promo__info button {
+    width: 100%;
+  }
+  .promo__image {
+    max-width: 280px;
+  }
+  .product__title {
+    font-size: 18px;
+  }
+  .product__wrap {
+    gap: 10px;
+  }
+  .card {
+    max-width: 224px;
+  }
+  .card__title {
+    font-size: 16px;
+  }
+  .card__subtitle {
+    font-size: 10px;
+  }
+  .card__condition {
+    font-size: 18px;
+  }
+  .card__description {
+    font-size: 12px;
+  }
+  .card__checkbox-text {
+    font-size: 12px;
+  }
+  .card__prise {
+    font-size: 14px;
+  }
+  .card__prise span {
+    font-size: 25px;
+  }
+  .card__offer {
+    font-size: 12px;
+  }
+  .card__button {
+    padding: 15px 0;
+  }
+  footer {
+    margin: 20px 0 10px 0;
+  }
+  footer .footer__branding img {
+    max-width: 130px;
+  }
+  footer .footer__branding p {
+    font-size: 12px;
+  }
+  footer .footer__link img {
+    padding: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
